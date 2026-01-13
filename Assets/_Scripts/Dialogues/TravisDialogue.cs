@@ -7,7 +7,6 @@ public class TravisDialogue : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private TMPro.TextMeshProUGUI textObject;
-    public GameEvent playerMoved;
 
     // Private reference for the Audio Source component
     private AudioSource m_AudioSource;
@@ -16,8 +15,6 @@ public class TravisDialogue : MonoBehaviour
     [SerializeField] private float timeBetweenChar = 0.05f;
     [SerializeField] private float timeBetweenSentences = 2f;
     private float timer;
-    int sentenceIndex = 0;
-    int letterIndex = 0;
 
     [Header("Sentences")]
     public List<string> sentences;
@@ -33,12 +30,12 @@ public class TravisDialogue : MonoBehaviour
         }
 
         textObject.text = "";
-        playerMoved.TriggerEvent();
     }
 
     // id de la sequence
     public void PrintSequence(int i)
     {
+        Debug.Log("Printing sequence" + i);
         StartCoroutine(PrintSequence(sequences[i].row));
     }
 
