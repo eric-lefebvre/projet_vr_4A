@@ -740,9 +740,11 @@ MonoBehaviour:
   timeBetweenSentences: 2
   sentences:
   - Bonjour, je m'appelle Travis, je suis ici pour te guider dans ton apprntissage
-  - "Commence par r\xE9cup\xE9rer 3 balles et mets les dans le panier"
+  - Commence par recuperer 3 balles et mets les dans le panier
+  - Dirige toi vers la porte a l'etage pour la seconde epreuve
   sequences:
   - row: 0000000001000000
+  - row: 02000000
 --- !u!82 &2033529311531151068
 AudioSource:
   m_ObjectHideFlags: 0
